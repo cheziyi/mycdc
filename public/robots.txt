@@ -1,0 +1,12 @@
+# The site is one page; everything worth indexing is on it.
+User-agent: *
+Allow: /
+
+# Not pages, and /calendar.ics and /api/preview carry a visitor's encrypted
+# credentials in the query string. Nothing should be fetching, indexing or
+# retaining a URL like that on someone's behalf.
+Disallow: /calendar.ics
+Disallow: /calendar
+Disallow: /api/
+
+Sitemap: https://mycdc.app/sitemap.xml

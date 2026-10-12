@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en-SG">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>
+      ComfortDelGro Driving Centre bookings in your calendar &mdash; unofficial
+    </title>
+    <meta
+      name="description"
+      content="See your ComfortDelGro Driving Centre bookings in your iPhone, Google or Outlook calendar. Unofficial, free, no sign-up, and it explains exactly what happens to your password."
+    />
+    <link rel="canonical" href="https://mycdc.app/" />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large"
+    />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#1a6cf0" />
+
+    <!-- Link previews. The card and the PNG icons come from `npm run og`. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="mycdc.app" />
+    <meta property="og:url" content="https://mycdc.app/" />
+    <meta property="og:locale" content="en_SG" />
+    <meta
+      property="og:title"
+      content="Your ComfortDelGro Driving Centre bookings, in the calendar you already use."
+    />
+    <meta
+      property="og:description"
+      content="Subscribe once from iPhone, Google Calendar or Outlook. New bookings show up as you make them, and cancelled ones disappear on their own. Unofficial, and not connected to ComfortDelGro Driving Centre."
+    />
+    <meta property="og:image" content="https://mycdc.app/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="mycdc.app &mdash; your ComfortDelGro Driving Centre bookings, in the calendar you already use."
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Your ComfortDelGro Driving Centre bookings, in the calendar you already use."
+    />
+    <meta
+      name="twitter:description"
+      content="Subscribe once from iPhone, Google Calendar or Outlook. Unofficial, free, and no sign-up needed."
+    />
+    <meta name="twitter:image" content="https://mycdc.app/og.png" />
+
+    <link rel="stylesheet" href="/styles.css" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231a6cf0'/%3E%3Cg transform='translate(3.52 11.52) scale(0.4444)'%3E%3Cpath d='M0 2 L56 0 L13 18 Z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E"
+    />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- "Does this site use cookies?" names the two hosts and the two cookies
+         this tag causes, so change both together. -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-3MJPXZTQFV"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-3MJPXZTQFV");
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://mycdc.app/#website",
+            "url": "https://mycdc.app/",
+            "name": "Unofficial calendar links for ComfortDelGro Driving Centre bookings",
+            "description": "Puts your ComfortDelGro Driving Centre bookings into the calendar you already use. Unofficial, and not connected to ComfortDelGro Driving Centre.",
+            "inLanguage": "en-SG",
+            "publisher": {
+              "@id": "https://mycdc.app/#app"
+            }
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://mycdc.app/#app",
+            "name": "Unofficial calendar links for ComfortDelGro Driving Centre bookings",
+            "alternateName": "ComfortDelGro Driving Centre bookings in your calendar",
+            "url": "https://mycdc.app/",
+            "image": "https://mycdc.app/og.png",
+            "applicationCategory": "UtilitiesApplication",
+            "applicationSubCategory": "Calendar",
+            "operatingSystem": "Any device with a web browser",
+            "browserRequirements": "Requires JavaScript and the Web Crypto API.",
+            "inLanguage": "en-SG",
+            "isAccessibleForFree": true,
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "SGD"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "Singapore"
+            },
+            "description": "Subscribe to your ComfortDelGro Driving Centre bookings from iPhone, Google Calendar or Outlook. New bookings show up as you make them, and cancelled ones disappear on their own. No sign-up, and your password is encrypted in your browser before it's sent.",
+            "disambiguatingDescription": "Unofficial. Not built by, endorsed by, or connected to ComfortDelGro Driving Centre.",
+            "featureList": [
+              "Subscribe to ComfortDelGro Driving Centre bookings as an iCalendar feed",
+              "Works with iPhone, iPad, Mac, Google Calendar and Outlook",
+              "New bookings show up on their own, and cancelled ones disappear",
+              "A reminder before each booking, as early as you like",
+              "Reporting counter, vehicle number and Zoom details, when the driving centre provides them",
+              "No account and no database: the subscription link is the only lasting record"
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://mycdc.app/#faq",
+            "inLanguage": "en-SG",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Is this ComfortDelGro Driving Centre's own app?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. It's unofficial: it isn't built by or connected to ComfortDelGro Driving Centre, and it has no arrangement with them. It signs in with your own account and reads the same booking list you see yourself. You still book and cancel in the CDC app. This just copies the result into your calendar."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which calendars does it work with?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Anything that takes a subscription URL: iPhone, iPad and Mac, Google Calendar, Outlook, Fastmail, Thunderbird. The link gives back an ordinary iCalendar feed, so if your calendar can subscribe to one at all, it can subscribe to this."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How quickly does a new booking show up?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "That depends on your calendar app, and on a Mac it's up to you. When you subscribe on a Mac, Calendar's Auto-refresh menu lets you pick anything from every five minutes to weekly. iPhone and iPad don't give you a choice, and check roughly once an hour. Google Calendar is slower still, sometimes only once a day. Bookings are cached here for fifteen minutes, so picking anything shorter than that on a Mac just asks more often for the same answer."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does it cost anything?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No, it's free. There's no account, no sign-up and no payment."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I remove it?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Delete the subscription in your calendar app, and the events go with it. To stop the link itself from working, anywhere and for anyone, change your ComfortDelGro Driving Centre password."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is my password safe?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Your learner ID and password are encrypted in your browser before they're sent, and they travel only inside your calendar link. The server decrypts them just long enough to sign in for you, and never stores them. How you're protected has the details."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this site use cookies?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Only for counting visits. The page uses Google Analytics, loaded from googletagmanager.com and google-analytics.com, which sets two cookies, _ga and _ga_3MJPXZTQFV, so that a return visit is recognised. Analytics is never told your learner ID, your password, your bookings or your calendar link."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div class="hairline" aria-hidden="true"></div>
+
+    <div class="topmatter">
+      <p class="provenance">
+        <strong>This isn't ComfortDelGro Driving Centre's own site.</strong>
+        It's an unofficial tool, not built by, endorsed by, or connected to
+        them. It signs in with your own account and reads the bookings you
+        already have.
+        <a href="#how">See what happens to your password</a>
+      </p>
+    </div>
+
+    <header class="opening">
+      <h1>
+        Your ComfortDelGro Driving Centre bookings, in the calendar you already
+        use.
+      </h1>
+      <p class="lede">
+        Subscribe once, and you're done. New bookings show up on your phone as
+        you make them, and cancelled ones disappear on their own.
+      </p>
+      <p class="lede">
+        To do that, it needs your ComfortDelGro Driving Centre learner ID and
+        password. They're encrypted in your browser before they go anywhere,
+        and everything below the form explains what happens to them, in as
+        much detail as you like.
+      </p>
+    </header>
+
+    <main>
+      <section class="ask" aria-labelledby="creds">
+        <h2 id="creds">Create your link</h2>
+        <p class="section-lede">
+          Use the same learner ID and password as in the ComfortDelGro Driving
+          Centre app. They're encrypted right here in your browser, and then
+          the link gets one test run, so you can see it working before you
+          subscribe. Curious how it works?
+          <a href="#how">It's all explained below</a>.
+        </p>
+
+        <form id="form" novalidate>
+          <div class="field">
+            <label for="learner">Learner ID</label>
+            <input
+              id="learner"
+              name="learner"
+              type="text"
+              inputmode="text"
+              autocomplete="username"
+              spellcheck="false"
+              autocapitalize="characters"
+              placeholder="00123456"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="password">ComfortDelGro Driving Centre password</label>
+            <div class="reveal">
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                spellcheck="false"
+                required
+              />
+              <button type="button" id="toggle" aria-pressed="false">
+                Show
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="go" id="submit">
+            Encrypt my details and test the link
+          </button>
+          <p class="status" id="status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="result" id="result" hidden aria-labelledby="ready">
+        <h2 id="ready">Your link is ready</h2>
+        <p class="found" id="found"></p>
+        <ul class="upcoming" id="upcoming"></ul>
+
+        <label class="urllabel" for="url">Calendar link</label>
+        <div class="urlrow">
+          <input id="url" type="text" readonly spellcheck="false" />
+          <button type="button" id="copy">Copy</button>
+        </div>
+
+        <div class="adds">
+          <a id="ios" class="add add--primary" href="#"
+            >Add to Apple Calendar</a
+          >
+          <a id="gcal" class="add" href="#" target="_blank" rel="noopener"
+            >Add to Google Calendar</a
+          >
+        </div>
+
+        <details class="manual">
+          <summary>Prefer to add it yourself?</summary>
+          <p>
+            <strong>iPhone or iPad.</strong> Go to Settings, then Apps, then
+            Calendar, then Calendar Accounts, then Add Account, then Other,
+            then Add Subscribed Calendar, and paste the link.
+          </p>
+          <p>
+            <strong>Mac.</strong> In Calendar, choose File, then New Calendar
+            Subscription, and paste the link. You'll see an Auto-refresh menu:
+            every 15 minutes is the shortest setting worth picking, because
+            bookings are cached here for that long anyway.
+          </p>
+          <p>
+            <strong>Google Calendar.</strong> On a computer, open Other
+            calendars, then From URL, and paste the link. Google is slow to
+            refresh subscribed calendars, sometimes only once a day.
+          </p>
+          <p>
+            <strong>Outlook.</strong> Choose Add calendar, then Subscribe from
+            web, and paste the link.
+          </p>
+          <p>
+            <strong>Reminders.</strong> Every booking comes with a reminder an
+            hour ahead. Want two hours instead? Add <code>&amp;alarm=120</code>
+            to the end of the link. For no reminder at all, add
+            <code>&amp;alarm=0</code>.
+          </p>
+        </details>
+      </section>
+
+      <section aria-labelledby="how">
+        <h2 id="how">What happens to your password</h2>
+
+        <figure class="flow">
+          <div class="flow__node">
+            <h3>This page, in your browser</h3>
+            <p>
+              Reads your ID and password and encrypts them. This is the only
+              place you type them, and it happens before anything is sent.
+            </p>
+          </div>
+          <p class="flow__wire">
+            <span
+              >your encrypted details, inside the link your calendar app sends
+              each time it refreshes</span
+            >
+          </p>
+          <div class="flow__node">
+            <h3>This site's server</h3>
+            <p>
+              Decrypts your details, signs in to ComfortDelGro Driving Centre
+              as you, builds your calendar, then forgets your ID and password.
+              The only thing it keeps for good is its private key.
+            </p>
+          </div>
+          <p class="flow__wire">
+            <span>your ID and password, as the driving centre expects them</span>
+          </p>
+          <div class="flow__node flow__node--far">
+            <h3>ComfortDelGro Driving Centre</h3>
+            <p>
+              Sends back your bookings: the same list you'd see if you checked
+              them yourself. This part belongs to the driving centre, not to
+              this site.
+            </p>
+          </div>
+          <figcaption>
+            Where your ID and password can be read, and where they can't.
+          </figcaption>
+        </figure>
+
+        <h3 class="sub">The encryption, step by step</h3>
+        <ol class="stages">
+          <li>
+            <p>
+              This page asks the server for its
+              <strong>public key</strong> (a P-256 elliptic-curve key). A public
+              key can only encrypt. The matching private key is the only thing
+              that can decrypt, and it never leaves the server.
+            </p>
+          </li>
+          <li>
+            <p>
+              Your browser makes
+              <strong>an ephemeral key pair of its own</strong>, used for this one
+              message and then discarded. It combines its private half with
+              the server's public key (<abbr title="Elliptic-curve Diffie–Hellman"
+                >ECDH</abbr
+              >) to derive a shared secret. The server can compute the same
+              secret from the other two halves, but nobody watching the link go
+              past can compute it from the public keys alone.
+            </p>
+          </li>
+          <li>
+            <p>
+              That shared secret is expanded into a 256-bit key (<abbr
+                title="HMAC-based key derivation function, SHA-256"
+                >HKDF-SHA256</abbr
+              >), and your ID and password are encrypted with it using
+              <strong class="nb">AES-256-GCM</strong>. GCM also authenticates
+              the result, so a link that's been altered fails to decrypt.
+            </p>
+          </li>
+          <li>
+            <p>
+              The ephemeral public key is bound into both the key derivation
+              and that authentication tag. That means your encrypted details
+              can't be lifted out of one link and attached to a different key:
+              they only decrypt as the whole piece they were encrypted as.
+            </p>
+          </li>
+        </ol>
+        <p class="aside">
+          In one line: ECIES over P-256, HKDF-SHA256, AES-256-GCM. The browser's
+          half is about a hundred lines in
+          <a href="/app.js" target="_blank" rel="noopener">/app.js</a>.
+        </p>
+      </section>
+
+      <section aria-labelledby="honest">
+        <h2 id="honest">How you're protected</h2>
+
+        <h3 class="sub sub--first">What you can count on</h3>
+        <ul class="ledger ledger--yes">
+          <li>
+            <h4>Your password stays hidden inside the link</h4>
+            <p>
+              Wherever your link is saved or sent, your password can't be read
+              from it.
+            </p>
+          </li>
+          <li>
+            <h4>There's no account and no database</h4>
+            <p>
+              This site keeps no list of who uses it. The link is the only
+              lasting record, and you're the one holding it. Your bookings are
+              cached for fifteen minutes, under a one-way hash of your
+              credentials rather than the credentials themselves, so an eager
+              calendar app doesn't pester the driving centre on your behalf. A
+              second copy is kept for 48 hours and only used if the driving
+              centre can't be reached, so an outage there doesn't empty your
+              calendar.
+            </p>
+          </li>
+          <li>
+            <h4>You can switch a link off any time</h4>
+            <p>
+              Change your ComfortDelGro Driving Centre password, and every link
+              made with the old one stops working the next time it refreshes.
+              Then pop back here and make a new one.
+            </p>
+          </li>
+        </ul>
+
+        <h3 class="sub">Two things to know</h3>
+        <ul class="ledger ledger--no">
+          <li>
+            <h4>The server sees your password for a moment</h4>
+            <p>
+              To sign in for you, the server has to decrypt your password. It
+              holds it in memory for the second or two each refresh takes, and
+              never stores it. The encryption keeps it hidden everywhere else.
+            </p>
+          </li>
+          <li>
+            <h4>Treat your link like a password</h4>
+            <p>
+              Anyone who has your link can see your bookings. They can't read
+              your password, sign in to the driving centre, or book or cancel
+              anything. So keep the link to yourself, and if it ever gets out,
+              changing your password switches it off.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="verify">
+        <h2 id="verify">It's all open source</h2>
+        <p class="section-lede">
+          Every line of this site is public, so you can see exactly what it
+          does.
+        </p>
+        <p>
+          The part that runs in your browser is
+          <a href="/app.js" target="_blank" rel="noopener">/app.js</a>: the
+          exact file your browser downloaded, unminified, about two hundred
+          lines of it. The four steps above are its
+          <code>encryptCredentials</code> function. The server's code sits
+          alongside it
+          <a
+            href="https://github.com/cheziyi/mycdc"
+            target="_blank"
+            rel="noopener"
+            >on GitHub</a
+          >, so you can follow your details at every step.
+        </p>
+
+        <p class="aside">Ready? <a href="#creds">Back to the form</a>.</p>
+      </section>
+
+      <section aria-labelledby="faq">
+        <h2 id="faq">Questions people ask</h2>
+
+        <dl class="checks">
+          <dt>Is this ComfortDelGro Driving Centre's own app?</dt>
+          <dd>
+            No. It's unofficial: it isn't built by or connected to ComfortDelGro
+            Driving Centre, and it has no arrangement with them. It signs in
+            with your own account and reads the same booking list you see
+            yourself. You still book and cancel in the CDC app. This just copies
+            the result into your calendar.
+          </dd>
+
+          <dt>Which calendars does it work with?</dt>
+          <dd>
+            Anything that takes a subscription URL: iPhone, iPad and Mac, Google
+            Calendar, Outlook, Fastmail, Thunderbird. The link gives back an
+            ordinary iCalendar feed, so if your calendar can subscribe to one at
+            all, it can subscribe to this.
+          </dd>
+
+          <dt>How quickly does a new booking show up?</dt>
+          <dd>
+            That depends on your calendar app, and on a Mac it's up to you. When
+            you subscribe on a Mac, Calendar's Auto-refresh menu lets you pick
+            anything from every five minutes to weekly. iPhone and iPad don't
+            give you a choice, and check roughly once an hour. Google Calendar
+            is slower still, sometimes only once a day. Bookings are cached here
+            for fifteen minutes, so picking anything shorter than that on a Mac
+            just asks more often for the same answer.
+          </dd>
+
+          <dt>Does it cost anything?</dt>
+          <dd>
+            No, it's free. There's no account, no sign-up and no payment.
+          </dd>
+
+          <dt>How do I remove it?</dt>
+          <dd>
+            Delete the subscription in your calendar app, and the events go with
+            it. To stop the link itself from working, anywhere and for anyone,
+            change your ComfortDelGro Driving Centre password.
+          </dd>
+
+          <dt>Is my password safe?</dt>
+          <dd>
+            Your learner ID and password are <a href="#how">encrypted in your
+            browser</a> before they're sent, and they travel only inside your
+            calendar link. The server decrypts them just long enough to sign in
+            for you, and never stores them. <a href="#honest">How you're
+            protected</a> has the details.
+          </dd>
+
+          <dt>Does this site use cookies?</dt>
+          <dd>
+            Only for counting visits. The page uses Google Analytics, loaded
+            from <code>googletagmanager.com</code> and
+            <code>google-analytics.com</code>, which sets two cookies,
+            <code>_ga</code> and <code>_ga_3MJPXZTQFV</code>, so that a return
+            visit is recognised. Analytics is never told your learner ID, your
+            password, your bookings or your calendar link.
+          </dd>
+        </dl>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        An unofficial tool: not built by, endorsed by, or connected to
+        ComfortDelGro Driving Centre. Please only use it with your own account.
+      </p>
+      <p>
+        <a href="#creds">Create your link</a>
+        <a href="#how">What happens to your password</a>
+        <a href="#honest">How you're protected</a>
+        <a href="#verify">Open source</a>
+        <a href="#faq">Questions people ask</a>
+        <a href="https://github.com/cheziyi/mycdc" target="_blank" rel="noopener"
+          >Source code</a
+        >
+      </p>
+    </footer>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

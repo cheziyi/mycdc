@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "mycdc",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-01",
+
+  // A request that matches a file in ./public is served from there, and only
+  // the rest reach the Worker.
+  "assets": {
+    "directory": "./public"
+  },
+
+  "observability": {
+    "enabled": true,
+    // A log records each request's URL, and the query string of /calendar.ics
+    // and /api/preview holds the visitor's encrypted credentials.
+    "redact_query_string": true
+  }
+
+  // CDC_PRIVATE_KEY_JWK is a secret, set in the dashboard or with
+  // `wrangler secret put`. `npm run keygen` prints a value for it.
+}

@@ -1,0 +1,600 @@
+/* Figtree and Newsreader are variable fonts, so every weight of each maps to
+   the same file. */
+@font-face {
+  font-family: Figtree;
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url(/fonts/figtree-v9-regular-latin.woff2) format("woff2");
+}
+@font-face {
+  font-family: Newsreader;
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url(/fonts/newsreader-v26-regular-latin.woff2) format("woff2");
+}
+@font-face {
+  font-family: Newsreader;
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/newsreader-v26-italic-latin.woff2) format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/fonts/ibm-plex-mono-v20-regular-latin.woff2) format("woff2");
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/fonts/ibm-plex-mono-v20-medium-latin.woff2) format("woff2");
+}
+
+:root {
+  --stock: #eef1f6;
+  --card: #ffffff;
+  --ink: #16233d;
+  --ink-soft: #4c5a70;
+  --rule: #d5dce7;
+
+  /* --accent carries white text at 4.7:1. --accent-text is the same hue
+     darkened until small type clears 6:1 on --stock. */
+  --accent: #1a6cf0;
+  --accent-text: #0e4fc2;
+  --accent-teal: #2fd0bf;
+  --accent-lift: #7fb4ff;
+
+  --caution: #a3123f;
+  --machine: #0d1b33;
+
+  --measure: 35rem;
+  --pad: clamp(1.15rem, 5vw, 2rem);
+  --radius: 10px;
+  --radius-sm: 7px;
+
+  --sans: Figtree, "Helvetica Neue", Arial, sans-serif;
+  --serif: Newsreader, Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --sweep: linear-gradient(90deg, var(--accent) 0%, var(--accent) 38%, var(--accent-teal) 100%);
+
+  --on-machine: #e8eefa;
+  --on-machine-soft: #b9c6da;
+  --on-machine-mute: #8b9ab3;
+  --on-machine-rule: #26364f;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--stock);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.125rem;
+  line-height: 1.62;
+  font-optical-sizing: auto;
+}
+
+p { margin: 0; text-wrap: pretty; }
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+a {
+  color: var(--accent-text);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+a:hover { color: var(--ink); }
+
+code { font-family: var(--mono); font-size: 0.86em; }
+
+abbr[title] { text-decoration: underline dotted #97a3b5; cursor: help; }
+
+/* An algorithm name reads as one token, so it never breaks across lines. */
+.nb { white-space: nowrap; }
+
+:focus-visible {
+  outline: 2.5px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* The focus outline in a colour that shows on the dark blocks. */
+.result :focus-visible,
+footer :focus-visible { outline-color: var(--accent-lift); }
+
+/* --- top of the page ----------------------------------------------------- */
+
+.hairline { height: 4px; background: var(--sweep); }
+
+.topmatter {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: clamp(1.1rem, 4vw, 1.5rem) var(--pad) 0;
+}
+
+/* --- provenance ---------------------------------------------------------- */
+
+.provenance {
+  margin: 0;
+  padding: 0.7rem 0.95rem;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--caution);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.provenance strong { color: var(--ink); font-weight: 700; }
+
+/* --- opening ------------------------------------------------------------- */
+
+.opening {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: clamp(2rem, 7vw, 3.25rem) var(--pad) clamp(2rem, 7vw, 3rem);
+}
+
+.opening h1 {
+  font-size: clamp(1.95rem, 6.4vw, 2.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.032em;
+  margin-bottom: 1.15rem;
+}
+
+.lede { color: var(--ink-soft); }
+.lede + .lede { margin-top: 0.85rem; }
+
+/* --- page rhythm --------------------------------------------------------- */
+
+main {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 0 var(--pad) clamp(3rem, 9vw, 4.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.75rem, 9vw, 4rem);
+}
+
+main h2 {
+  font-size: clamp(1.38rem, 4.2vw, 1.65rem);
+  line-height: 1.22;
+  margin-bottom: 0.7rem;
+}
+
+h3.sub {
+  font-size: 1.15rem;
+  margin: 2rem 0 0.85rem;
+}
+
+h3.sub--first { margin-top: 1.2rem; }
+
+.section-lede { color: var(--ink-soft); margin-bottom: 1.5rem; }
+
+.aside {
+  margin-top: 1.4rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+.aside code { font-style: normal; }
+
+/* --- flow ---------------------------------------------------------------- */
+
+.flow {
+  margin: 0 0 0.5rem;
+  padding: 0;
+}
+
+.flow__node {
+  position: relative;
+  padding-left: 1.7rem;
+}
+
+/* Filled for the two machines that hold the password, hollow for CDC. */
+.flow__node::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.42em;
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+  background: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.flow__node--far::before { background: var(--stock); border-color: var(--ink-soft); }
+
+.flow__node h3 { font-size: 1.02rem; }
+
+.flow__node p {
+  color: var(--ink-soft);
+  font-size: 0.99rem;
+  margin-top: 0.2rem;
+}
+
+.flow__wire {
+  position: relative;
+  margin: 0;
+  padding: 0.75rem 0 0.75rem 1.7rem;
+  min-height: 2.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.flow__wire::before {
+  content: "";
+  position: absolute;
+  left: 4.5px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: repeating-linear-gradient(#9aa7ba 0 5px, transparent 5px 10px);
+}
+
+.flow__wire span {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.flow figcaption {
+  margin-top: 1.1rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+/* --- stages -------------------------------------------------------------- */
+
+.stages {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: stage;
+  display: grid;
+  gap: 1.35rem;
+}
+
+.stages li {
+  counter-increment: stage;
+  position: relative;
+  padding-left: 2.4rem;
+}
+
+.stages li::before {
+  content: counter(stage);
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent-text);
+  border-bottom: 2px solid var(--accent);
+  padding: 0 0.35rem 0.1rem 0;
+}
+
+.stages p { color: var(--ink-soft); }
+.stages strong { color: var(--ink); font-weight: 600; }
+
+/* --- ledger -------------------------------------------------------------- */
+
+/* One column at every width: side by side, the shorter entry leaves a gap that
+   reads as a missing item. */
+
+.ledger {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.ledger li {
+  padding-left: 1.15rem;
+  border-left: 4px solid var(--rule);
+}
+
+.ledger--yes li { border-left-color: var(--accent); }
+.ledger--no li { border-left-color: var(--ink-soft); }
+
+.ledger h4 { font-size: 1rem; line-height: 1.3; letter-spacing: -0.012em; }
+
+.ledger p {
+  color: var(--ink-soft);
+  font-size: 1.01rem;
+  margin-top: 0.25rem;
+}
+
+/* --- checks -------------------------------------------------------------- */
+
+.checks { margin: 0; }
+
+.checks dt {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1.02rem;
+  line-height: 1.35;
+  letter-spacing: -0.012em;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--rule);
+}
+
+.checks dt:first-of-type { padding-top: 0; border-top: none; }
+
+.checks dd {
+  margin: 0.3rem 0 1.5rem;
+  color: var(--ink-soft);
+  font-size: 1.01rem;
+}
+
+/* --- ask ----------------------------------------------------------------- */
+
+.ask {
+  position: relative;
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: clamp(1.45rem, 5vw, 2rem);
+}
+
+.ask::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 4px;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: var(--sweep);
+}
+
+.field { margin-bottom: 1.2rem; }
+
+label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 0.97rem;
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+}
+
+input[type="text"], input[type="password"] {
+  width: 100%;
+  font-family: var(--mono);
+  font-size: 1rem;
+  padding: 0.62rem 0.7rem;
+  border: 1.5px solid #b6c0d0;
+  border-radius: var(--radius-sm);
+  background: #fff;
+  color: var(--ink);
+}
+
+/* 5:1 against the field, so the placeholder reads as a format hint. */
+input::placeholder { color: #6d7789; }
+input:focus-visible { border-color: var(--accent); outline-offset: 1px; }
+
+.reveal { display: flex; gap: 0.5rem; }
+
+.reveal button {
+  flex: none;
+  font-family: var(--sans);
+  font-size: 0.93rem;
+  font-weight: 600;
+  padding: 0 0.9rem;
+  border: 1.5px solid #b6c0d0;
+  border-radius: var(--radius-sm);
+  background: var(--stock);
+  color: var(--ink-soft);
+  cursor: pointer;
+  min-width: 4.4rem;
+}
+
+.reveal button:hover { color: var(--accent-text); border-color: var(--accent); }
+
+.go {
+  width: 100%;
+  font-family: var(--sans);
+  font-size: 1.03rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  padding: 0.78rem 1rem;
+  margin-top: 0.4rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.go:hover { background: var(--accent-text); }
+.go[disabled] { background: #8996aa; cursor: progress; }
+
+.status {
+  margin-top: 0.9rem;
+  font-size: 0.97rem;
+  color: var(--ink-soft);
+  min-height: 1.5em;
+}
+
+.status[data-tone="error"] { color: var(--caution); font-weight: 500; }
+
+/* --- result -------------------------------------------------------------- */
+
+.result {
+  background: var(--machine);
+  color: var(--on-machine);
+  padding: clamp(1.35rem, 5vw, 2rem);
+  border-radius: var(--radius);
+}
+
+.result h2 { color: #fff; margin-bottom: 0.4rem; }
+.found { color: var(--on-machine-mute); margin-bottom: 1.2rem; }
+
+.upcoming {
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 1.1rem 0 0;
+  display: grid;
+  gap: 0.9rem;
+  border-top: 1px solid var(--on-machine-rule);
+}
+
+.upcoming li { font-size: 1rem; line-height: 1.35; }
+
+.upcoming .when {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--on-machine-mute);
+  font-variant-numeric: tabular-nums;
+  margin-top: 0.15rem;
+}
+
+.urllabel {
+  font-family: var(--sans);
+  color: var(--on-machine-mute);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.urlrow { display: flex; gap: 0.5rem; margin: 0.3rem 0 1.2rem; }
+
+#url {
+  flex: 1 1 auto;
+  min-width: 0;
+  font-family: var(--mono);
+  font-size: 0.79rem;
+  padding: 0.6rem 0.65rem;
+  border: 1.5px solid #35486a;
+  border-radius: var(--radius-sm);
+  background: #08122a;
+  color: var(--on-machine-soft);
+}
+
+#copy {
+  flex: none;
+  font-family: var(--sans);
+  font-size: 0.93rem;
+  font-weight: 600;
+  padding: 0 0.95rem;
+  border: 1.5px solid #35486a;
+  border-radius: var(--radius-sm);
+  background: #1c2b45;
+  color: var(--on-machine);
+  cursor: pointer;
+  min-width: 5.3rem;
+}
+
+#copy:hover { background: #263756; }
+#copy[data-done="1"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+.adds { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+
+.add {
+  flex: 1 1 12rem;
+  text-align: center;
+  text-decoration: none;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.98rem;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid #3d5175;
+  color: var(--on-machine);
+}
+
+.add:hover { background: rgba(255,255,255,.07); color: #fff; }
+
+.add--primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.add--primary:hover { background: #3a84ff; color: #fff; }
+
+.manual {
+  margin-top: 1.4rem;
+  border-top: 1px solid var(--on-machine-rule);
+  padding-top: 1rem;
+  font-size: 0.97rem;
+  color: var(--on-machine-soft);
+}
+
+.manual summary {
+  cursor: pointer;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--on-machine);
+}
+.manual p { margin-top: 0.75rem; }
+.manual strong { color: #fff; font-weight: 600; }
+
+.manual code {
+  font-family: var(--mono);
+  background: rgba(0,0,0,.35);
+  padding: 0.12em 0.35em;
+  border-radius: 3px;
+  color: var(--accent-teal);
+}
+
+/* --- footer -------------------------------------------------------------- */
+
+footer {
+  background: var(--machine);
+  color: var(--on-machine-mute);
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  padding: clamp(1.75rem, 6vw, 2.5rem) var(--pad);
+}
+
+footer p { max-width: var(--measure); margin: 0 auto; line-height: 1.55; }
+footer p + p { margin-top: 0.8rem; display: flex; flex-wrap: wrap; gap: 0.35rem 1.4rem; }
+footer a { color: var(--accent-lift); }
+footer a:hover { color: #fff; }
+
+/* --- motion -------------------------------------------------------------- */
+
+.result[data-enter="1"] { animation: settle 0.3s cubic-bezier(.2,.7,.3,1) both; }
+
+@keyframes settle {
+  from { opacity: 0; transform: translateY(-5px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* --- wider viewports ----------------------------------------------------- */
+
+@media (min-width: 46rem) {
+  :root { --measure: 38rem; }
+
+}
