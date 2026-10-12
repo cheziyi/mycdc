@@ -2,7 +2,7 @@
   "name": "mycdc",
   "version": "1.0.0",
   "private": true,
-  "license": "GPL-3.0-or-later",
+  "license": "MIT",
   "repository": "github:cheziyi/mycdc",
   "type": "module",
   "description": "Turns your ComfortDelGro Driving Centre bookings into a calendar subscription.",

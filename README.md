@@ -174,7 +174,7 @@ decisions behind the less obvious parts.
 
 ## Licence
 
-[GPL-3.0-or-later](LICENSE). Copyright © 2026 the contributors.
+[MIT](LICENSE). Copyright © 2026 the contributors.
 
 The fonts in `public/fonts/` (Figtree, Newsreader and IBM Plex Mono) are under
 the SIL Open Font License, and you'll find each licence beside its font.
